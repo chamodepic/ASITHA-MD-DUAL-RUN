@@ -5,7 +5,7 @@ Recommended Platforms to Deploy
 
 ⭕VERCEL
 
-⭕REPLIT
+⭕GITHUB ACTION
 
 ⭕NETLIFY
 
