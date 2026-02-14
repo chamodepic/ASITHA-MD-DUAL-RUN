@@ -1,4 +1,4 @@
-const { exec } = require('child_process');
+const { execSync } = require('child_process');
 const path = require('path');
 const fs = require('fs');
 
@@ -14,23 +14,35 @@ async function startFinalSystem() {
 
         console.log(`\n--- 🛠️ Processing ${folder.toUpperCase()} ---`);
 
+        // 1️⃣ Install dependencies properly (blocking)
         if (!fs.existsSync(path.join(folderPath, 'node_modules'))) {
             console.log(`📦 Installing modules in ${folder}...`);
-            exec(`npm install`, { cwd: folderPath }, (err) => {
-                if (err) console.log("Install failed");
-            });
+            try {
+                execSync('npm install', { cwd: folderPath, stdio: 'inherit' });
+            } catch (err) {
+                console.log(`❌ Install failed for ${folder}`);
+                continue;
+            }
         }
 
+        // 2️⃣ Start bot
         console.log(`🚀 Starting ${folder} using npm start...`);
 
-        exec(`npm start`, {
-            cwd: folderPath,
-            env: {
-                ...process.env,
-                PORT: (8000 + i).toString()
-            }
-        });
+        try {
+            execSync('npm start', {
+                cwd: folderPath,
+                stdio: 'inherit',
+                env: {
+                    ...process.env,
+                    PORT: (8000 + i).toString()
+                }
+            });
+        } catch (err) {
+            console.log(`❌ Failed to start ${folder}`);
+            continue;
+        }
 
+        // 3️⃣ Delay between bots
         if (i < BOT_FOLDERS.length - 1) {
             console.log(`⏳ Waiting 60s...`);
             await new Promise(res => setTimeout(res, DELAY_TIME));
