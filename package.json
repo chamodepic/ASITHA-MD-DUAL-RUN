@@ -1,11 +1,11 @@
 {
   "name": "asitha-dual-manager",
-  "version": "1.0.0",
+  "version": "1.1.0",
+  "description": "Dual WhatsApp Bot Manager",
+  "main": "launcher.js",
+  "type": "commonjs",
   "scripts": {
-    "install-bots": "cd bot1 && npm install --no-bin-links && cd ../bot2 && npm install --no-bin-links",
-    "start": "node_modules/.bin/pm2-runtime start ecosystem.config.js"
+    "start": "node launcher.js"
   },
-  "dependencies": {
-    "pm2": "^5.3.0"
-  }
+  "license": "MIT"
 }

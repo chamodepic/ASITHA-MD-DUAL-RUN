@@ -12,7 +12,9 @@ Recommended Platforms to Deploy
 Other Than This There is many more Platforms That you Can deploy.
 
 # How To Deploy This Dual Bot
-To deploy this Dual bot You will see Two Folders that Names are Like **bot1, bot2** and then you will See ```settings.js``` on both folders.
+To deploy this Dual bot You will see Two Folders that Names are Like **bot1, bot2** and then you will See ```settings.js``` on both folders. put your SESSION_ID there  
+
+Then on **bot1, bot2** you will see a file named ```ecosystem.config.js``` on that file, there is a text line ```max_memory_restart``` Change the **Value** to ```512M```, ```1024M```, ```750M``` **(Use only One of these to Value)**, This Prevent from your bot get crashed. **(If your Deploy Platform gives you 1024MB Ram Add ```400M``` for each Value)**
 
 # Get Your SESSION_ID for Whatsapp Bot Deploy
 
@@ -25,6 +27,16 @@ To deploy this Dual bot You will see Two Folders that Names are Like **bot1, bot
 
 
 
-***Modified By*** `Mr.Sahan Chamod`
 
-***Repo Owner*** `Mr.Sahan Dissanayaka`
+# For Vercel Deploying & Acc Buy Contact Me on Whatsapp ```94705505943```
+
+
+**Only For 1$ (320LKR)**
+
+
+
+
+
+***Founder*** `Mr.Sahan Chamod`
+
+***Modified By*** `Mr.Sahan Dissanayaka`
