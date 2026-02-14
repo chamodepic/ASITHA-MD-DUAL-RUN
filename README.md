@@ -5,7 +5,7 @@ Recommended Platforms to Deploy
 
 ⭕VERCEL
 
-⭕REPLIT
+⭕GITHUB ACTION
 
 ⭕NETLIFY
 
@@ -25,6 +25,6 @@ To deploy this Dual bot You will see Two Folders that Names are Like **bot1, bot
 
 
 
-***Code Owner*** `Mr.Sahan Chamod`
+***Modified By*** `Mr.Sahan Chamod`
 
-***Repo Creater*** `Mr.Sahan Dissanayaka`
+***Repo Owner*** `Mr.Sahan Dissanayaka`
